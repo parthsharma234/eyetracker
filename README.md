@@ -37,7 +37,13 @@ Install the requriements with pip
 - Click Interaction: The script will perform clicks if the gaze is within a specified region of the screen.
 - Exit: Press Esc to close the application.
 
+
+
 ## Notes 
 - Ensure that your webcam is properly connected and accessible
 - The pyautogui library requires appropriate permissions to control the mouse cursor
 - Verify that all dependencies are installed and compatible with your Python version
+
+
+https://github.com/user-attachments/assets/7e222491-1bd7-48c0-aec1-b738031812ef
+
