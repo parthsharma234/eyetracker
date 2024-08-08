@@ -1,28 +1,43 @@
-Face Mesh Cursor Control:
-This project uses computer vision and machine learning techniques to control the mouse cursor using facial landmarks detected through a webcam. By leveraging the MediaPipe library for face mesh detection and PyAutoGUI for cursor control, the program allows hands-free mouse movement and clicking based on facial gestures.
 
-Features:
-Cursor Control: Move the mouse cursor by tracking facial landmarks.
+# Gaze Detection Using OpenCV, MediaPipe, and PyAutoGUI
 
-Clicking Mechanism: Automatically click when specific facial gestures are detected.
+This project demonstrates a gaze detection system that uses OpenCV, MediaPipe, and PyAutoGUI to track where a user is looking and interact with the computer accordingly. The system detects eye landmarks and calculates the gaze direction to control the mouse cursor and perform clicks based on where the user is gazing.
 
-Webcam Integration: Real-time facial landmark detection using the device's webcam.
 
-Frame Capture: Periodic frame capture for debugging purposes.
+## Features
 
-Technologies Used:
+- Move the mouse cursor by tracking facial landmarks.
+- Automatically click when specific facial gestures are detected.
+- Displays circles around the pupils and a line indicating the gaze direction
+- Moves the mouse cursor according to the detected gaze direction
 
-OpenCV: For capturing and processing video frames.
 
-MediaPipe: For detecting facial landmarks.
+## Requirements
+- Python 3.x
+- OpenCV: For video capture and image processing.
+- MediaPipe: For detecting facial landmarks.
+- PyAutoGUI: For controlling the mouse cursor.
+- NumPy: For numerical operations.
 
-PyAutoGUI: For simulating mouse movements and clicks.
-How It Works:
-The program initializes the webcam and begins capturing video frames.
-MediaPipe's Face Mesh module is used to detect facial landmarks.
-Specific landmarks are tracked to control the mouse cursor's position on the screen.
-The program detects eye movements to simulate mouse clicks.
-Frames are periodically saved for debugging, and the loop runs for a fixed number of frames.
-Usage:
 
-To use this project, ensure you have a webcam connected and the required libraries installed. Run the script, and the webcam feed will start. Move your head to control the cursor, and blink to click.
+
+## Installation
+
+Install the requriements with pip
+
+```pip
+  pip install opencv-python mediapipe pyautogui numpy
+```
+
+
+## Usage 
+- Run the Script: Execute the Python script to start the gaze detection system.
+- Webcam Feed: The script will open a window displaying the webcam feed.
+- Mouse Control: The mouse cursor will move according to the detected gaze direction.
+- Click Interaction: The script will perform clicks if the gaze is within a specified region of the screen.
+- Exit: Press Esc to close the application.
+
+## Notes 
+- Ensure that your webcam is properly connected and accessible
+- The pyautogui library requires appropriate permissions to control the mouse cursor
+- Verify that all dependencies are installed and compatible with your Python version
